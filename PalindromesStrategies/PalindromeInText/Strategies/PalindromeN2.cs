@@ -1,6 +1,6 @@
-﻿using PalindromeInText.Interface;
+﻿using PalindromesStrategy.Interface;
 
-namespace PalindromesStrategy
+namespace PalindromesStrategy.Strategies
 {
     public class PalindromeN2 : IPalindrome
     {

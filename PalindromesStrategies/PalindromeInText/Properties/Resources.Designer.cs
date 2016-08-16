@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PalindromesStrategy.Properties {
+namespace Strategies.Properties {
     using System;
     
     

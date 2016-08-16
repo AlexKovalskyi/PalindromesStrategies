@@ -1,5 +1,5 @@
 ﻿
-namespace PalindromeInText.Interface
+namespace PalindromesStrategy.Interface
 {
     public interface IPalindrome
     {
