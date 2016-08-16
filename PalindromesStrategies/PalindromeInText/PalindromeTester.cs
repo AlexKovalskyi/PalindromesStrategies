@@ -4,20 +4,19 @@ using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 
-
 namespace PalindromesStrategy
 {
     public class PalindromeTester
     {
         private IPalindrome _palindromeStrategy;
         private string _content;
-        private string _destinationDir;
+        private string _outputFile;
 
-        public PalindromeTester(IPalindrome palindromeStrategy, string content, string destinationDir)
+        public PalindromeTester(IPalindrome palindromeStrategy, string content, string outputFile)
         {
 			_palindromeStrategy  = palindromeStrategy;
 			_content = content;
-			_destinationDir = destinationDir;
+			_outputFile = outputFile;
         }
 
         public void Execute()
@@ -25,7 +24,7 @@ namespace PalindromesStrategy
 			Stopwatch stopwatch = new Stopwatch();
 			stopwatch.Start();
 
-			TestPalindrome(_content, _destinationDir);
+			TestPalindrome(_content, _outputFile);
 
 			stopwatch.Stop();
 			Console.WriteLine("Time Elapsed: {0}", stopwatch.Elapsed);

@@ -4,11 +4,11 @@ namespace PalindromesStrategy
 { 
 	public class PalindromeN : IPalindrome
     {
-		public bool IsPalindrome(string verifyPalindrome)
+		public bool IsPalindrome(string str)
 		{ 
-			for (int i = 0;i < verifyPalindrome.Length / 2;i++)
+			for (int i = 0;i < str.Length / 2;i++)
 			{
-				if (verifyPalindrome[i] != verifyPalindrome[verifyPalindrome.Length - i - 1])
+				if (str[i] != str[str.Length - i - 1])
 				{
 					return false;
 				}

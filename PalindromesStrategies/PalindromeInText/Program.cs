@@ -9,11 +9,10 @@ namespace PalindromesStrategy
 		{
 			string fileWithPalindromes = @"I:\Palindrome.txt";
 			string fileWithText = Properties.Resources.LargeTXT;
+
 			IPalindrome palindromeN = new PalindromeN();
 			PalindromeTester palindromeTester = new PalindromeTester(palindromeN, fileWithText, fileWithPalindromes);
 			palindromeTester.Execute();
-
-
 
 			IPalindrome palindromeN2 = new PalindromeN2();
 			PalindromeTester palindromeTesterN2 = new PalindromeTester(palindromeN2, fileWithText, fileWithPalindromes);
