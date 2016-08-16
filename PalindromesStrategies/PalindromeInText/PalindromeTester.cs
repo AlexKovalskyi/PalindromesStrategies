@@ -5,7 +5,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 
 
-namespace PalindromesStrategy
+namespace Strategies
 {
     public class PalindromeTester
     {
