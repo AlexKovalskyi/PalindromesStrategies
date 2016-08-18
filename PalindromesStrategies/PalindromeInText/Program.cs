@@ -14,8 +14,6 @@ namespace PalindromesStrategy
 			string fileWithText = Resources.LargeTXT;
 
 			IApp palindromeTester = new PalindromeTester(fileWithText, fileWithPalindromes, new PalindromeN2());
-			
-
 
 			IPalindrome palindromeN2 = new PalindromeN2();
 			PalindromeTester palindromeTesterN2 = new PalindromeTester(fileWithText, fileWithPalindromes);
