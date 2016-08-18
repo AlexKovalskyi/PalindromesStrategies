@@ -1,5 +1,8 @@
-﻿using PalindromeInText.Interface;
+﻿using PalindromesStrategy.Interface;
+using PalindromesStrategy.Strategies;
+using Strategies.Properties;
 using System;
+using System.IO;
 
 namespace PalindromesStrategy
 {
@@ -7,15 +10,16 @@ namespace PalindromesStrategy
 	{
 		static void Main(string[] args)
 		{
-			string fileWithPalindromes = @"I:\Palindrome.txt";
-			string fileWithText = Properties.Resources.LargeTXT;
+			string fileWithPalindromes = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Palindromeqqq.txt");
+			string fileWithText = Resources.LargeTXT;
 
-			IPalindrome palindromeN = new PalindromeN();
-			PalindromeTester palindromeTester = new PalindromeTester(palindromeN, fileWithText, fileWithPalindromes);
-			palindromeTester.Execute();
+			IApp palindromeTester = new PalindromeTester(fileWithText, fileWithPalindromes, new PalindromeN2());
+			
+
 
 			IPalindrome palindromeN2 = new PalindromeN2();
-			PalindromeTester palindromeTesterN2 = new PalindromeTester(palindromeN2, fileWithText, fileWithPalindromes);
+			PalindromeTester palindromeTesterN2 = new PalindromeTester(fileWithText, fileWithPalindromes);
+			palindromeTesterN2.PalindromeStrategy = new PalindromeN3();
 			palindromeTesterN2.Execute();
 
 			Console.ReadLine();
