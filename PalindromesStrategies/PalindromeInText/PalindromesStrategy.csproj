@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients\DesktopUser.cs" />
     <Compile Include="Interface\IApp.cs" />
     <Compile Include="Interface\IPalindrome.cs" />
     <Compile Include="Strategies\PalindromeN3.cs" />

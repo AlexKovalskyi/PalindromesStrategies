@@ -1,4 +1,5 @@
-﻿using PalindromesStrategy.Interface;
+﻿using PalindromesStrategy.Clients;
+using PalindromesStrategy.Interface;
 using PalindromesStrategy.Strategies;
 using Strategies.Properties;
 using System;
@@ -15,12 +16,19 @@ namespace PalindromesStrategy
 
 			IApp palindromeTester = new PalindromeTester(fileWithText, fileWithPalindromes, new PalindromeN2());
 
+            
 			IPalindrome palindromeN2 = new PalindromeN2();
 			PalindromeTester palindromeTesterN2 = new PalindromeTester(fileWithText, fileWithPalindromes);
 			palindromeTesterN2.PalindromeStrategy = new PalindromeN3();
 			palindromeTesterN2.Execute();
 
-			Console.ReadLine();
+            // Simple example of IApp interface profit.
+            DesktopUser user = new DesktopUser("Alexandr Ko", palindromeTester);
+            Console.WriteLine($"{user} is going to use {nameof(palindromeTester)} with strategy {nameof(PalindromeN2)}");
+            user.Launch();
+            user.Close();
+
+            Console.ReadLine();
 		}
 	}
 }
